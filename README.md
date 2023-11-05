@@ -1,6 +1,6 @@
 # KN PLC Programming Tool
 
-This is a ladder logic editor developed using QT Widgets. User can create Ladder Logic networks and upload it to KN PLC.
+This is a ladder logic editor developed using Qt6 Widgets. User can create Ladder Logic networks and upload it to KN PLC.
 KN PLC is a programmable logic controller with core functionality. It is built around Arduino Mega 2560.
 
 It supports:

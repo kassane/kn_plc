@@ -149,7 +149,7 @@ void SettingsForm::accept()
         settingsResult.append("\n");
 
     }
-    qDebug()<<settingsResult<<endl;
+    qDebug()<<settingsResult<<"\n";
 
 
 

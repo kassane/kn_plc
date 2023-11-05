@@ -61,7 +61,6 @@
 #include <QFile>
 #include <QProcess>
 
-
 const int InsertTextButton = 100;
 
 //! [0]
@@ -297,16 +296,16 @@ void MainWindow::fw_groupClicked(int id)
 {
     switch (id) {
     case 0:
-        qInfo()<<"settings"<<endl;
+        qInfo()<<"settings\n";
         openSettings();
         break;
     case 1:
-        qInfo()<<"refresh"<<endl;
+        qInfo()<<"refresh\n";
         refreshPortList();
         break;
     case 2:
         flashProgram();
-        qInfo()<<"upload"<<endl;
+        qInfo()<<"upload\n";
         break;
 
     }
@@ -350,8 +349,8 @@ void MainWindow::fontSizeChanged(const QString &)
 void MainWindow::sceneScaleChanged(const QString &scale)
 {
     double newScale = scale.left(scale.indexOf(tr("%"))).toDouble() / 100.0;
-    QMatrix oldMatrix = view->matrix();
-    view->resetMatrix();
+    QTransform oldMatrix = view->transform();
+    view->resetTransform();
     view->translate(oldMatrix.dx(), oldMatrix.dy());
     view->scale(newScale, newScale);
 }
